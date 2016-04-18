@@ -1,0 +1,90 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/gradient_bg"
+    tools:context=".activities.MainActivity$PlaceholderFragment">
+
+    <TextView
+        android:id="@+id/tvWeatherCity"
+        style="@style/WhiteLargeBodyText" />
+
+    <ImageView android:id="@+id/ivWeatherIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cloudy"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/tvWeatherTime"
+        style="@style/WhiteNormalBodyText"
+        android:text="@string/last_updated"
+        android:layout_below="@+id/tvWeatherCity"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:id="@+id/ivWeatherRefresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/refresh"
+        android:onClick="onRefresh"
+        android:layout_alignBottom="@+id/tvWeatherCity"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/tvWeatherTemperature"
+        style="@style/WhiteHugeBodyText"
+        android:text="10 C"
+        android:layout_above="@+id/ivWeatherIcon"
+        android:layout_centerHorizontal="true"
+        android:shadowColor="@color/background_floating_material_dark"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1"
+        android:textStyle="bold" />
+
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivWeatherIcon"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal">
+        <TextView
+            android:id="@+id/tvWeatherHumidityTitle"
+            style="@style/WhiteNormalBodyText"
+            android:text="@string/humidity_title" />
+
+        <TextView
+            android:id="@+id/tvWeatherHumidity"
+            style="@style/WhiteNormalBodyText"
+            android:text="0.0%"
+            android:paddingLeft="@dimen/margin_10"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/tvWeatherHumidityTitle"
+            android:layout_toEndOf="@+id/tvWeatherHumidityTitle" />
+
+        <TextView
+            android:id="@+id/tvWeatherWindTitle"
+            style="@style/WhiteNormalBodyText"
+            android:text="@string/wind_title"
+            android:layout_below="@+id/tvWeatherHumidityTitle"
+            android:layout_toLeftOf="@+id/tvWeatherHumidity"
+            android:layout_toStartOf="@+id/tvWeatherHumidity" />
+
+        <TextView
+            android:id="@+id/tvWeatherWind"
+            style="@style/WhiteNormalBodyText"
+            android:text="0.0km/h"
+            android:paddingLeft="@dimen/margin_10"
+            android:layout_below="@+id/tvWeatherHumidity"
+            android:layout_alignLeft="@+id/tvWeatherHumidity" />
+    </RelativeLayout>
+
+</RelativeLayout>

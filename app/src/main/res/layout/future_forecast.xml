@@ -1,0 +1,37 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/gradient_bg"
+    tools:context=".activities.MainActivity$PlaceholderFragment">
+
+    <TextView
+        android:id="@+id/tvFutureCity"
+        style="@style/WhiteLargeBodyText"
+        android:text="cityName" />
+
+    <TextView
+        android:id="@+id/tvFutureTitle"
+        style="@style/WhiteNormalBodyText"
+        android:layout_below="@+id/tvFutureCity"
+        android:text="@string/future_title"
+        android:paddingBottom="@dimen/margin_10"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tvFutureTitle"
+        />
+
+<!--    <ListView android:id="@+id/lvFuture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tvFutureTitle"
+        android:layout_marginBottom="40dp"/>
+-->
+</RelativeLayout>
